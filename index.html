@@ -22,9 +22,12 @@
         raycaster="objects: [gps-entity-place];"
         vr-mode-ui="enabled: false"
 		embedded
-		arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'>
 
-        <a-camera gps-camera rotation-reader>
+        <a-camera
+		  look-controls-enabled = 'false' arjs-look-controls= 'smoothingFactor: 0.1'
+		  gps-camera = "simulateLatitude: 52.2667465209961; simulateLongitude: -7.09122848510742; simulateAltitude: 10; gpsMinDistance: 5;"
+		  rotation-reader>
 		</a-camera>
 	</a-scene>
 </body>
